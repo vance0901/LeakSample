@@ -1,0 +1,64 @@
+import javax.xml.namespace.QName
+
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        applicationId "com.vance.leaksample"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.0-alpha01'
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+
+}
+
+//def parser = new XmlParser()
+//
+////解析文件
+//Node node = parser.parse(new File("F:\\Lance\\Memory\\LeakSample\\app\\src\\main\\AndroidManifest.xml"))
+//NodeList activities = node.application[0].activity
+//def ns = new groovy.xml.Namespace("http://schemas.android.com/apk/res/android", "android")
+//activities.forEach { Node activity ->
+//
+//    //得到所有属性这里返回一个Map
+//    def attributes = activity.attributes()
+//    //输出结果
+//    println attributes.get(ns.name)
+//    if (activity."intent-filter".action[0] != null){
+//        println activity."intent-filter".action[0].attributes().get(ns.name)
+//    }
+//
+//}
