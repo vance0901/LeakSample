@@ -48,7 +48,7 @@ dependencies {
 //def parser = new XmlParser()
 //
 ////解析文件
-//Node node = parser.parse(new File("F:\\Lance\\Memory\\LeakSample\\app\\src\\main\\AndroidManifest.xml"))
+//Node node = parser.parse(new File("F:\\vance\\Memory\\LeakSample\\app\\src\\main\\AndroidManifest.xml"))
 //NodeList activities = node.application[0].activity
 //def ns = new groovy.xml.Namespace("http://schemas.android.com/apk/res/android", "android")
 //activities.forEach { Node activity ->
